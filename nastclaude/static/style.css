@@ -1,0 +1,90 @@
+# static/style.css
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cyberpunk', sans-serif;
+    background: url('/static/main.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #ff00ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#main-screen, #selection-screen {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff00ff;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+    }
+}
+
+button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+button:hover {
+    background-color: #ff00ff;
+    transform: scale(1.1);
+}
+
+#love-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#nickname-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.nickname-option {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nickname-option img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.nickname-option:hover {
+    transform: scale(1.1);
+}

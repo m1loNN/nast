@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контрпики и контрартефакты Dota 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    </style>
+    <div class="container">
+        <header class="my-4 text-center">
+            <h1>Контрпики и контрартефакты Dota 2</h1>
+        </header>
+
+        <div class="form-group">
+            <label for="hero-select">Выберите героя:</label>
+            <select id="hero-select" class="form-control">
+                <option value="">Выберите героя</option>
+                {% for hero in hero_names %}
+                    <option value="{{ hero }}">{{ hero }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" onclick="getHeroInfo()">Получить информацию</button>
+
+        <div id="hero-info" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
